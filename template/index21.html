@@ -18,154 +18,32 @@
 
     </div>
 
+<div class="b1">
+        {% if books.count > 0  %}
+        <table>
+            <tr>
+                <th>books_name</th>
+                <th>prod_year</th>
+                <th>zhanr</th>
+                <th>aftor</th>
 
-<div class="a2">
-    <h2 class="a3">Book_name</h2>
-    <h2 class="a3">Sinfhosh</h2>
-    <h2 class="a3">Narkhosh</h2>
-    <h2 class="a3">Rohbar_sinf</h2>
-    <h2 class="a3">Floor</h2>
-    <h2 class="a3">Kabinet</h2>
-</div>
+        
+            </tr>
+        {% for student in books  %}
+        <tr>
+        <td>{{student.books_name}} {{student.last_name}}</td>
+        <td>{{student.prod_year}}</td>
+        <td>{{student.zhanr}}</td>
+        <td>{{student.aftor}}</td>
 
-
-
-<br>
-<div class="a4">
-<h4 class="aa1">1.Adabiyot</h6>
-<h4 class="aa2">Sinfi 11A</h6>
-<h4 class="aa3">750 somoni</h6>
-<h4 class="aa4">Khalima Zair</h6>
-<h4 class="aa5">1</h6>
-<h4 class="aa6">3</h6>
-</div>
-
-
-
-<br>
-
-<div class="a4">
-    <h4 class="aa1">1.Adabiyot</h6>
-    <h4 class="aa2">Sinfi 11A</h6>
-    <h4 class="aa3">750 somoni</h6>
-    <h4 class="aa4">Khalima Zair</h6>
-    <h4 class="aa5">1</h6>
-    <h4 class="aa6">3</h6>
-    </div>
-
-    <br>
-
-
-    <div class="a4">
-        <h4 class="aa1">1.Adabiyot</h6>
-        <h4 class="aa2">Sinfi 11A</h6>
-        <h4 class="aa3">750 somoni</h6>
-        <h4 class="aa4">Khalima Zair</h6>
-        <h4 class="aa5">1</h6>
-        <h4 class="aa6">3</h6>
+        
+        
+        </tr>
+        
+        {% endfor %}
+        </table>
+        {% endif %}
         </div>
-
-
-
-        <br>
-
-        <div class="a4">
-            <h4 class="aa1">1.Adabiyot</h6>
-            <h4 class="aa2">Sinfi 11A</h6>
-            <h4 class="aa3">750 somoni</h6>
-            <h4 class="aa4">Khalima Zair</h6>
-            <h4 class="aa5">1</h6>
-            <h4 class="aa6">3</h6>
-            </div>
-
-
-            <br>
-            <div class="a4">
-                <h4 class="aa1">1.Adabiyot</h6>
-                <h4 class="aa2">Sinfi 11A</h6>
-                <h4 class="aa3">750 somoni</h6>
-                <h4 class="aa4">Khalima Zair</h6>
-                <h4 class="aa5">1</h6>
-                <h4 class="aa6">3</h6>
-                </div>
-
-
-
-                <br>
-
-
-                <div class="a4">
-                    <h4 class="aa1">1.Adabiyot</h6>
-                    <h4 class="aa2">Sinfi 11A</h6>
-                    <h4 class="aa3">750 somoni</h6>
-                    <h4 class="aa4">Khalima Zair</h6>
-                    <h4 class="aa5">1</h6>
-                    <h4 class="aa6">3</h6>
-                    </div>
-
-
-
-
-                <br>
-
-
-                <div class="a4">
-                    <h4 class="aa1">1.Adabiyot</h6>
-                    <h4 class="aa2">Sinfi 11A</h6>
-                    <h4 class="aa3">750 somoni</h6>
-                    <h4 class="aa4">Khalima Zair</h6>
-                    <h4 class="aa5">1</h6>
-                    <h4 class="aa6">3</h6>
-                    </div>
-
-
-                    <br>
-
-
-                    <div class="a4">
-                        <h4 class="aa1">1.Adabiyot</h6>
-                        <h4 class="aa2">Sinfi 11A</h6>
-                        <h4 class="aa3">750 somoni</h6>
-                        <h4 class="aa4">Khalima Zair</h6>
-                        <h4 class="aa5">1</h6>
-                        <h4 class="aa6">3</h6>
-                        </div>
-
-<br>
-
-                        <div class="a4">
-                            <h4 class="aa1">1.Adabiyot</h6>
-                            <h4 class="aa2">Sinfi 11A</h6>
-                            <h4 class="aa3">750 somoni</h6>
-                            <h4 class="aa4">Khalima Zair</h6>
-                            <h4 class="aa5">1</h6>
-                            <h4 class="aa6">3</h6>
-                            </div>
-
-
-<br>
-                            <div class="a4">
-                                <h4 class="aa1">1.Adabiyot</h6>
-                                <h4 class="aa2">Sinfi 11A</h6>
-                                <h4 class="aa3">750 somoni</h6>
-                                <h4 class="aa4">Khalima Zair</h6>
-                                <h4 class="aa5">1</h6>
-                                <h4 class="aa6">3</h6>
-                                </div>
-
-
-                                <br>
-                                <div class="a4">
-                                    <h4 class="aa1">1.Adabiyot</h6>
-                                    <h4 class="aa2">Sinfi 11A</h6>
-                                    <h4 class="aa3">750 somoni</h6>
-                                    <h4 class="aa4">Khalima Zair</h6>
-                                    <h4 class="aa5">1</h6>
-                                    <h4 class="aa6">3</h6>
-                                    </div>
-
-
-
 
 
 

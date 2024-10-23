@@ -4,10 +4,11 @@
 }
 body{
     background-color: rgb(90, 142, 238);
-    color: white;
+    color: black;
 }
 
 .a1{
+    color: wheat;
     display: flex;
     align-items: center;
     background-color: black;
@@ -34,47 +35,14 @@ body{
 }
 
 
+table,th,tr,td{
+    border: 1px black solid;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    text-align: center;
+    padding: 8px 20px;
 
-.a2{
-    display: flex;
-}
 
-.a2 h2{
-    margin-top: 50px;
-    margin-left: 60px;
-
-}
-
-.a3{
-border-radius: 8px;
-padding: 10px;
-border: 2px black solid;
-}
-
-.a4{
-    display: flex;
-}
-
-.aa1{
-    margin-left: 64px;
-}
-
-.aa2{
-    margin-left: 80px;
-}
-
-.aa3{
-    margin-left: 80px;
-}
-
-.aa4{
-    margin-left: 168px;
-}
-
-.aa5{
-    margin-left: 284px;
-}
-
-.aa6{
-    margin-left: 160px;
 }

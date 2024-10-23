@@ -1,50 +1,45 @@
 from django.db import models
 
 
-class Register(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    birth_date = models.DateField()
-    email = models.EmailField(max_length=254)
-    phone_number = models.CharField(max_length=13)
-    
-    def __str__(self):
-        return self.first_name + " " + self.last_name
-
-
 
 class Student(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     birth_date = models.DateField()
-    email = models.EmailField(max_length=254)
-    phone_number = models.CharField(max_length=13)
+    email = models.EmailField(max_length=254) 
+    phone_number = models.CharField(max_length=13) 
+    narkhi_kitob = models.CharField(max_length=(50),default=150) 
+    suporidansh = models.CharField(max_length=(50),default=False)
     
     def __str__(self):
         return self.first_name + " " + self.last_name
+    
+    
+class City(models.Model):
+    name = models.CharField(max_length=(50))
 
-class Rohbar(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    birth_date = models.DateField()
-    email = models.EmailField(max_length=254)
-    phone_number = models.CharField(max_length=13)
-    
     def __str__(self):
-        return self.first_name + " " + self.last_name
-    
-    
-    
-class Biliotekahi(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    birth_date = models.DateField()
-    email = models.EmailField(max_length=254)
-    phone_number = models.CharField(max_length=13)
-    
-    def __str__(self):
-        return self.first_name + " " + self.last_name
+        return self.name
+        
+        
+class Region(models.Model):
+    name = models.CharField(max_length=(50))
 
+    def __str__(self):
+        return self.name
+    
+class Adress(models.Model):
+    student = models.OneToOneField("books.Student",on_delete=models.CASCADE)
+    city = models.OneToOneField("books.City",on_delete=models.CASCADE)
+    region = models.OneToOneField("books.Region",on_delete=models.CASCADE)
+    adress = models.CharField(max_length=(50))
+    def __str__(self):
+        return self.student.__str__()
+        
+
+
+    
+    
 
 
 class Books(models.Model):
@@ -54,4 +49,4 @@ class Books(models.Model):
     aftor = models.CharField(max_length=60)
     
     def __str__(self):
-        return self.first_name + " " + self.last_name
+        return self.books_name

@@ -1,7 +1,9 @@
 
 from django.http import HttpResponse
 from django.template import loader
-
+from django.shortcuts import render
+from django.views.generic import TemplateView
+from .models import Student,Books
 
 def home(request):
     template = loader.get_template("index.html")
@@ -20,10 +22,13 @@ def log_out1(request):
     return HttpResponse(template.render())
 
 def infor(request):
-    template = loader.get_template("index2.html")
-    return HttpResponse(template.render())
+    students = Student.objects.all()
+    return render(request,'index2.html',context={"students": students})
 
 def infor1(request):
-    template = loader.get_template("index21.html")
-    return HttpResponse(template.render())
+    books = Books.objects.all()
+    return render(request,'index21.html',context={"books": books})
+
+
+
     

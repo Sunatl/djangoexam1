@@ -4,7 +4,7 @@
 }
 body{
     background-color: rgba(151, 252, 1, 0.959);
-    color: white;
+    color: black;
 }
 
 .a1{
@@ -34,47 +34,14 @@ body{
 }
 
 
+table,th,tr,td{
+    border: 1px black solid;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 80px;
+    width: 50%;
+    text-align: center;
+    padding: 8px 20px;
 
-.a2{
-    display: flex;
-}
 
-.a2 h2{
-    margin-top: 50px;
-    margin-left: 60px;
-
-}
-
-.a3{
-border-radius: 8px;
-padding: 10px;
-border: 2px black solid;
-}
-
-.a4{
-    display: flex;
-}
-
-.aa1{
-    margin-left: 64px;
-}
-
-.aa2{
-    margin-left: 130px;
-}
-
-.aa3{
-    margin-left: 113px;
-}
-
-.aa4{
-    margin-left: 119px;
-}
-
-.aa5{
-    margin-left: 124px;
-}
-
-.aa6{
-    margin-left: 120px;
 }

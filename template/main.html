@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+    {% if people.count > 0 %}
+    <h2>Список пользователей</h2>
+    <table>
+        <th>Fulname</th>
+        <th>birth_date</th>
+        <th>email</th>
+        <th>phone_number</th>
+        {% for student in studens %}
+        <tr>
+            <td>{{ student.firstname }} {{student.last_name}}</td>
+            <td>{{ person.name }}</td>
+            <td>{{ person.age }}</td>
+            <td><a href="edit/{{person.id}}">Изменить</a> | <a href="delete/{{person.id}}">Удалить</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+    
+</body>
+</html>
