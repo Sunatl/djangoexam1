@@ -1,26 +1,65 @@
-body{
-    /* padding: 20px; */
-    background-color: sandybrown;
-    padding-top: 70px;
+/* Услубҳо барои <body> */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.aa1{
-    margin-left: 480px;
-    margin-top: 100px;
-    border: 2px white solid;
-    width: 200px;
-    padding: 10px;
 
-}
-.e2{
-    margin-left: 20px;
-}
-.c1{
-    margin-left: 20px;
-}
-.aaa1{
-    margin-left: 70px;
-
-    width: 40px;
+/* Контейнер барои шакл */
+.aa1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
     text-align: center;
+}
 
+/* Услубҳо барои унвон */
+.a3 {
+    color: #34495e;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Услубҳо барои input */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Услубҳо барои тугмаи 'OK' */
+.aaa1 {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.aaa1:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
 }

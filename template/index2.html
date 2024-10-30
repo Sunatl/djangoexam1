@@ -14,13 +14,15 @@
     <div class="a1">
         <h1>Information</h1>
         <a href="http://127.0.0.1:8000/Biblioteka_information"><h3 class="sa">Biblioteka</h3></a>
-        <a href="http://127.0.0.1:8000/Books_online"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'home' %}"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'add' %}"><h3 class="sas">Add</h3></a>
 
     </div>
 
 <div class="b1">
 {% if students.count > 0  %}
 <table>
+    <caption> <h3>Student</h1></caption>
     <tr>
         <th>Fullname</th>
         <th>birth_date</th>
@@ -28,19 +30,23 @@
         <th>phone_number</th>
         <th>narkhi_kitob</th>
         <th>suporidansh</th>
+        <th>detail</th>
 
     </tr>
 {% for student in students  %}
+
 <tr>
+<a href="http://127.0.0.1:8000/get_by_student/{{student.id}}">
 <td>{{student.first_name}} {{student.last_name}}</td>
 <td>{{student.birth_date}}</td>
 <td>{{student.email}}</td>
 <td>{{student.phone_number}}</td>
 <td>{{student.narkhi_kitob}}</td>
 <td>{{student.suporidansh}}</td>
-
-
+<td><a href="http://127.0.0.1:8000/get_by_student/{{student.id}}">Get</a></td>
+</a>
 </tr>
+
 
 {% endfor %}
 </table>

@@ -1,32 +1,17 @@
-<!DOCTYPE html>
-{% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Biblioteka</title>
-        <link rel="stylesheet" href="{% static 'index22.css' %}">
-
-
-
-
-</head>
-<body>
-    <div class="aa1">
-      <div class="e2">
-      <label class="a3" for="a1">Username</label>
-      <br><br>
-      <input type="text"  placeholder="Enter your name" id="a1">
+{% extends "index.html" %}
+{% block title %}Register Biblioteka{% endblock title %}
+{% block content %}
+<div class="aa11">
+    <div class="e2">
+        <label class="a33" for="a1">Username</label>
+        <input type="text" placeholder="Enter your name" id="a1">
     </div>
-     <br>
-     <div class="c1">
+    <div class="c1">
         <div class="e1">
-            <label class="a3" for="a2">Password</label> <br><br>
-            <input type="text" placeholder="Enter your Password" id="a2">
+            <label class="a33" for="a2">Password</label>
+            <input type="password" placeholder="Enter your Password" id="a2">
         </div>
     </div>
-    <a href='http://127.0.0.1:8000/Biblioteka_information'><h2 class="aaa1">ok</h2></a>
+    <a href="{% url 'biblioteka' %}"><h2 class="aaa1">OK</h2></a>
 </div>
-    
-</body>
-</html>
+{% endblock content %}

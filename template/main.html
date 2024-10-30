@@ -4,27 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{% block title %}{% endblock title %}</title>
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 <body>
-    {% if people.count > 0 %}
-    <h2>Список пользователей</h2>
-    <table>
-        <th>Fulname</th>
-        <th>birth_date</th>
-        <th>email</th>
-        <th>phone_number</th>
-        {% for student in studens %}
-        <tr>
-            <td>{{ student.firstname }} {{student.last_name}}</td>
-            <td>{{ person.name }}</td>
-            <td>{{ person.age }}</td>
-            <td><a href="edit/{{person.id}}">Изменить</a> | <a href="delete/{{person.id}}">Удалить</a></td>
-        </tr>
-        {% endfor %}
-    </table>
-    {% endif %}
-    
+
+
+    <header>
+            <div class="a111">
+            <h1>Welcome your Detail</h1>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'rohbars' %}">Menu</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="http://127.0.0.1:8000/delete_company/{{students.id}}">Delete</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="http://127.0.0.1:8000/update_company/{{students.id}}">Update</a>
+    </div>
+    </header>
+    {% block content %}
+    <div class="container">
+            <div class="card">
+                <h3>Fulname: {{students.first_name}} {{students.last_name}}</h3>
+                <h3>Birth date: {{students.birth_date}}</h3>
+                <h3>Email: {{students.email}}</h3>
+                <h3>Phone: {{students.phone_number}}</h3>
+                <h3>Narkhsh: {{students.narkhi_kitob}}</h3>
+                <h3>Suporidan: {{students.suporidansh}}</h3>
+            </div>
+        </div>
+
+
+{% endblock content %}
 </body>
 </html>

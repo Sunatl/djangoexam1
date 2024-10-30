@@ -2,6 +2,7 @@ from django.db import models
 
 
 
+
 class Student(models.Model):
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
@@ -15,26 +16,7 @@ class Student(models.Model):
         return self.first_name + " " + self.last_name
     
     
-class City(models.Model):
-    name = models.CharField(max_length=(50))
 
-    def __str__(self):
-        return self.name
-        
-        
-class Region(models.Model):
-    name = models.CharField(max_length=(50))
-
-    def __str__(self):
-        return self.name
-    
-class Adress(models.Model):
-    student = models.OneToOneField("books.Student",on_delete=models.CASCADE)
-    city = models.OneToOneField("books.City",on_delete=models.CASCADE)
-    region = models.OneToOneField("books.Region",on_delete=models.CASCADE)
-    adress = models.CharField(max_length=(50))
-    def __str__(self):
-        return self.student.__str__()
         
 
 

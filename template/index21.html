@@ -14,32 +14,31 @@
     <div class="a1">
         <h1>Information</h1>
         <a href="http://127.0.0.1:8000/Rohbar_information"><h3 class="sa">Rohbar</h3></a>
-        <a href="http://127.0.0.1:8000/Books_online"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'home' %}"><h3 class="sas">Home</h3></a>
+        <a href="{% url 'add_book' %}"><h3 class="sas">Add</h3></a>
 
     </div>
+
 
 <div class="b1">
         {% if books.count > 0  %}
         <table>
+            <caption> <h3>Books</h1> </caption>
             <tr>
                 <th>books_name</th>
                 <th>prod_year</th>
                 <th>zhanr</th>
                 <th>aftor</th>
-
-        
+                <th>detail</th>
             </tr>
         {% for student in books  %}
         <tr>
-        <td>{{student.books_name}} {{student.last_name}}</td>
+        <td>{{student.books_name}}</td>
         <td>{{student.prod_year}}</td>
         <td>{{student.zhanr}}</td>
         <td>{{student.aftor}}</td>
-
-        
-        
+        <td><a href="http://127.0.0.1:8000/get_by_book/{{student.id}}">Get</a></td>
         </tr>
-        
         {% endfor %}
         </table>
         {% endif %}
@@ -47,6 +46,6 @@
 
 
 
-    
+    <br><br><br>
 </body>
 </html>

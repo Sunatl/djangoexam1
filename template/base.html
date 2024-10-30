@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+    <header>
+        <div class="a1">
+            <h1 class="a2">Book Online</h1>
+            <a href="{% url 'rohbar' %}"><h3 class="a3">Rohbar</h3></a>
+            <a href='http://127.0.0.1:8000/Biblioteka'><h3 class="a4">Biblioteka</h3></a>
+        </div>
+    </header>
+{% block content %}{% endblock content %}
+
+<footer>
+    <div class="aa1">
+        <h1 class="aa2">Very good</h1>
+    </div>
+</footer>
+</body>
+</html>
