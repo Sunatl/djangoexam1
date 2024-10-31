@@ -13,10 +13,13 @@
     <br>
 
 <div class="a1">
-<form method = "post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <a href="{% url 'biblioteka' %}"><button type="submit">Save</button></a>
+    <h1>{% if object %}Таҳрири Китоб{% else %}Иловаи Китоб{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Захира</button>
+    </form>
+    <a href="{% url 'biblioteka' %}">Баргаштан ба Рӯйхати Китобҳо</a>
 </form>
 </div>
 </body>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohbar Informatin</title>
+    <title>Rohbar</title>
         <link rel="stylesheet" href="{% static 'index2.css' %}">
 </head>
 <body>
@@ -20,7 +20,6 @@
     </div>
 
 <div class="b1">
-{% if students.count > 0  %}
 <table>
     <caption> <h3>Student</h1></caption>
     <tr>
@@ -33,10 +32,10 @@
         <th>detail</th>
 
     </tr>
-{% for student in students  %}
+
+{% for student in object_list  %}
 
 <tr>
-<a href="http://127.0.0.1:8000/get_by_student/{{student.id}}">
 <td>{{student.first_name}} {{student.last_name}}</td>
 <td>{{student.birth_date}}</td>
 <td>{{student.email}}</td>
@@ -44,13 +43,11 @@
 <td>{{student.narkhi_kitob}}</td>
 <td>{{student.suporidansh}}</td>
 <td><a href="http://127.0.0.1:8000/get_by_student/{{student.id}}">Get</a></td>
-</a>
 </tr>
 
 
 {% endfor %}
 </table>
-{% endif %}
 </div>
 
 

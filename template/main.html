@@ -14,19 +14,19 @@
             <div class="a111">
             <h1>Welcome your Detail</h1>
             <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'rohbars' %}">Menu</a>
-            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="http://127.0.0.1:8000/delete_company/{{students.id}}">Delete</a>
-            <a style="width: 50 px; height: 30px;margin-top: 50px" href="http://127.0.0.1:8000/update_company/{{students.id}}">Update</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px"  href="{% url 'delete_student' object.id %}">Delete</a>
+            <a style="width: 50 px; height: 30px;margin-top: 50px" href="{% url 'update_student' object.id %}">Update</a>
     </div>
     </header>
     {% block content %}
     <div class="container">
             <div class="card">
-                <h3>Fulname: {{students.first_name}} {{students.last_name}}</h3>
-                <h3>Birth date: {{students.birth_date}}</h3>
-                <h3>Email: {{students.email}}</h3>
-                <h3>Phone: {{students.phone_number}}</h3>
-                <h3>Narkhsh: {{students.narkhi_kitob}}</h3>
-                <h3>Suporidan: {{students.suporidansh}}</h3>
+                <h3>Fulname: {{object.first_name}} {{object.last_name}}</h3>
+                <h3>Birth date: {{object.birth_date}}</h3>
+                <h3>Email: {{object.email}}</h3>
+                <h3>Phone: {{object.phone_number}}</h3>
+                <h3>Narkhsh: {{object.narkhi_kitob}}</h3>
+                <h3>Suporidan: {{object.suporidansh}}</h3>
             </div>
         </div>
 

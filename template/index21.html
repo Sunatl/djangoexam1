@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohbar Informatin</title>
+    <title>Biblioteka Informatin</title>
         <link rel="stylesheet" href="{% static 'index21.css' %}">
 </head>
 <body>
@@ -13,15 +13,15 @@
 
     <div class="a1">
         <h1>Information</h1>
+        <div class="base">
         <a href="http://127.0.0.1:8000/Rohbar_information"><h3 class="sa">Rohbar</h3></a>
         <a href="{% url 'home' %}"><h3 class="sas">Home</h3></a>
         <a href="{% url 'add_book' %}"><h3 class="sas">Add</h3></a>
-
+    </div>
     </div>
 
 
 <div class="b1">
-        {% if books.count > 0  %}
         <table>
             <caption> <h3>Books</h1> </caption>
             <tr>
@@ -31,17 +31,16 @@
                 <th>aftor</th>
                 <th>detail</th>
             </tr>
-        {% for student in books  %}
+        {% for student in object_list %}
         <tr>
-        <td>{{student.books_name}}</td>
-        <td>{{student.prod_year}}</td>
-        <td>{{student.zhanr}}</td>
-        <td>{{student.aftor}}</td>
+        <td>{{ student.books_name }}</td>
+        <td>{{ student.prod_year }}</td>
+        <td>{{ student.zhanr }}</td>
+        <td>{{ student.aftor }}</td>
         <td><a href="http://127.0.0.1:8000/get_by_book/{{student.id}}">Get</a></td>
         </tr>
         {% endfor %}
         </table>
-        {% endif %}
         </div>
 
 

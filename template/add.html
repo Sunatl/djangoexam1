@@ -9,15 +9,21 @@
 </head>
 <body>
 
-<h1 class="a2">Add</h1>
+    <h1 class="a2">Add</h1>
     <br>
 
 <div class="a1">
-<form method = "post" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{form.as_p}}
-    <a href="{% url 'rohbars' %}"><button type="submit">Save</button></a>
+    <h1>Иловаи Student</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'rohbars' %}">Баргаштан ба Рӯйхати Studentho</a>
 </form>
 </div>
+
+
+
 </body>
 </html>

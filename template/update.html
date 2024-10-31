@@ -2,18 +2,36 @@
 {% block title %}Menu{% endblock title %}
 {% block content %}
 
-<div class="container mt-5">
-    <h1 class="text-primary mb-4">Update</h1>
+<!-- <h1>{% if object %}Таҳрири Китоб{% else %}Иловаи Китоб{% endif %}</h1>
+    
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    
+    <button type="submit">{% if object %}Таҳрир кардан{% else %}Илова кардан{% endif %}</button>
+</form> -->
 
-    <div class="card shadow p-4">
-        <form method="post" enctype="multipart/form-data">
+<!-- <a href="{% url 'biblioteka' %}">Баргаштан ба Рӯйхати Китобҳо</a> -->
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card shadow p-4" style="max-width: 600px; width: 100%;">
+        <h2 class="text-center text-primary mb-4">{% if object %}Таҳрири Китоб{% else %}Иловаи Китоб{% endif %}</h2>
+        
+        <form method="post">
             {% csrf_token %}
-            {{ form.as_p }}
-            <div class="d-flex justify-content-start mt-3">
-                <button type="submit" class="btn btn-success me-2">Save</button>
-                <a href="{% url 'biblioteka' %}" class="btn btn-secondary">Cancel</a>
+            <div class="mb-3">
+                {{ form.as_p }}
+
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-success w-50">{% if object %}Таҳрир кардан{% else %}Илова кардан{% endif %}</button>
             </div>
         </form>
+
+        <div class="text-center mt-3">
+            <a href="{% url 'biblioteka' %}" class="btn btn-secondary w-50">Баргаштан ба Рӯйхати Китобҳо</a>
+        </div>
     </div>
 </div>
 

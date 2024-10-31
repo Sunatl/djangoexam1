@@ -4,17 +4,19 @@
 {% block content %}
 
 
-<div class="container mt-5">
-    <div class="card shadow p-4">
-        <h2 class="text-danger mb-4">Are you sure you want to delete this post: <strong>{{ tasks.books_name }} </strong></h2>
-        <form method="post" enctype="multipart/form-data" class="d-flex flex-column align-items-start">
+<div class="container d-flex justify-content-center align-items-center min-vh-50">
+    <div class="card shadow-lg p-4" style="max-width: 500px; width: 100%;">
+        <h1 class="text-center text-danger mb-4">Нест кардани Китоб</h1>
+        <p class="text-center">Шумо боварӣ доред, ки <strong>"{{ object.books_name }}"</strong>-ро нест кардан мехоҳед?</p>
+        
+        <form method="post" class="text-center mt-3">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-danger me-3">Yes, Delete</button>
-            <a href="{% url 'biblioteka' %}" class="btn btn-secondary mt-2">No, Go Back</a>
+            <button type="submit" class="btn btn-danger me-2">Бале, нест кун</button>
+            <a href="{% url 'biblioteka' %}" class="btn btn-secondary" style="margin-top: 10px;">Баргаштан</a>
         </form>
     </div>
 </div>
+
 
 
 {% endblock content %}
